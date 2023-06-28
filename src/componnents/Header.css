@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__left {
+    margin-left: 25px;
+}
+
+.header__left > h1 {
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.header__right {
+    margin-right: 20px;
+}

@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import MovieList from './componnents/MovieList';
+import Header from './componnents/Header';
 
 function App() {
+  const [movies, setMovies] = useState([]);
+  const [searchValue, setSearchValue] = useState('');
+
+  const getMovieRequest = async (searchValue) => {
+    const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=93fe1299`;
+    const response = await fetch(url);
+    const responseJson = await response.json();
+
+    if (responseJson.Search) {
+      setMovies(responseJson.Search);
+    }
+  };
+
+  useEffect (() => {
+    getMovieRequest(searchValue);
+  }, [searchValue]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Header searchValue={searchValue} setSearchValue={setSearchValue}/>
+      <div className='movie__row'>
+      <MovieList movies={movies} />
+      </div>
     </div>
   );
 }

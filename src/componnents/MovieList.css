@@ -1,0 +1,14 @@
+.row__posters {
+    width: 100%;
+    padding: 20px;
+    transition: transform 450ms;
+}
+
+.row__posters > img {
+    height: 400px;
+    width: 300px;
+}
+
+.row__posters:hover {
+    transform: scale(1.08);
+}
