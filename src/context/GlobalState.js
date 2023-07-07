@@ -1,7 +1,7 @@
 import React, {createContext, useReducer} from "react"
 import AppReducer from "./AppReducer";
 
-//initial state
+//initial state ok
 const initialState = {
     watchlist: []
 };
