@@ -1,14 +1,29 @@
-.row__posters {
-    width: 100%;
-    padding: 20px;
+.image__container {
     transition: transform 450ms;
+    position: relative;
+    margin-right: 20px;
 }
 
-.row__posters > img {
+.image__container > img {
     height: 400px;
     width: 300px;
 }
 
-.row__posters:hover {
+.image__container:hover {
     transform: scale(1.08);
+    cursor: pointer;
+}
+
+.add__watchlist {
+    opacity: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 260px;
+    transition: 0.5s ease;
+    bottom: 0;
+    padding: 20px;
+}
+
+.image__container:hover .add__watchlist {
+    opacity: 1;
 }

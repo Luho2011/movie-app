@@ -1,0 +1,15 @@
+body {
+    background: rgb(44, 44, 44);
+    
+  }
+  
+  .movie__row {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    padding: 20px;
+  }
+  
+  .movie__row::-webkit-scrollbar {
+    display: none;
+  }
