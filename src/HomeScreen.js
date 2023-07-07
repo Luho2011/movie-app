@@ -4,7 +4,6 @@ import "./HomeScreen.css"
 import MovieList from './componnents/MovieList';
 import Header from './componnents/Header';
 import AddWatchlist from './componnents/AddWatchlist';
-import WatchList from './componnents/WatchList';
 
 function HomeScreen() {
     const [movies, setMovies] = useState([]);
